@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>我的快搜 - 一个搜索框直达全网</title>
+  <meta name="description" content="聚合常用搜索、AI、学术、工具站点，输入关键词，一点直达。">
+  <meta name="keywords" content="快搜,聚合搜索,导航,学术搜索,工具">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <span class="brand-mark">快</span>
+      <span class="brand-name">我的快搜</span>
+    </div>
+    <button id="themeBtn" class="icon-btn" type="button" title="切换深色模式" aria-label="切换深色模式">🌙</button>
+  </header>
+
+  <main class="wrap">
+    <section class="hero">
+      <h1>搜什么，一点就到</h1>
+      <p class="subtitle">输入关键词，点击下方任意站点即可带着关键词直达搜索结果</p>
+      <div class="searchbar">
+        <input id="kw" type="text" placeholder="输入关键词，回车用默认搜索引擎搜索…" autocomplete="off" aria-label="搜索关键词">
+        <button id="clearBtn" class="clear-btn" type="button" title="清空" aria-label="清空关键词">✕</button>
+        <button id="searchBtn" class="search-btn" type="button">搜索</button>
+      </div>
+      <div class="hint">小提示：按 <kbd>/</kbd> 快速聚焦搜索框，按 <kbd>Esc</kbd> 清空</div>
+    </section>
+
+    <nav class="tabs" id="tabs" aria-label="站点分类"></nav>
+
+    <section class="grid" id="grid" aria-live="polite"></section>
+
+    <p class="empty" id="empty" hidden>这个分类下还没有站点，去 <code>assets/sites.js</code> 添加吧。</p>
+  </main>
+
+  <footer class="footer">
+    <span>我的快搜 · 自己动手，搜索快人一步</span>
+  </footer>
+
+  <script src="assets/sites.js"></script>
+  <script src="assets/app.js"></script>
+</body>
+</html>
